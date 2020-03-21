@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+        <title>TarozChiou's Space</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <h1 class="logo">Logo</h1>
+                <ul>
+                    <li>
+                        <a href="#" id="top">aaaa</a>
+                    </li>
+                    <li>
+                        <a href="#" id="sec1">bbbb</a>
+                    </li>
+                    <li>
+                        <a href="#" id="sec2">cccc</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- <section>
+                <div class="project">
+                    <div class="image">
+                        <img src="pic/default.jpg">
+                    </div>
+                    <div class="info">
+                        <div>
+                            <h3>dzfxgchjh</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ducimus
+                                saepe iusto tempore molestiae.</p>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section class="cover" id="cv">
+                <div class="intro">
+                    <h2>AAAA</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum itaque..</p>
+                </div>
+            </section>
+
+            <section class="container1" id="ct1">
+                <h2>作品集/Profolio</h2>
+                <form class="profolio">
+                    <div class="project">
+                        <div class="image">
+                            <img src="pic/default.jpg">
+                        </div>
+                        <div class="info">
+                            <div>
+                                <h3>dzfxgchjh</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ducimus
+                                    saepe iusto tempore molestiae.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="image">
+                            <img src="pic/default.jpg">
+                        </div>
+                        <div class="info">
+                            <div>
+                                <h3>dzfxgchjh</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ducimus
+                                    saepe iusto tempore molestiae.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="image">
+                            <img src="pic/default.jpg">
+                        </div>
+                        <div class="info">
+                            <div>
+                                <h3>dzfxgchjh</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ducimus
+                                    saepe iusto tempore molestiae.</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <hr>
+
+            <section class="container2" id="ct2">
+                <div class="recent">
+                    <h2>近日練習/Recent Practice</h2>
+                        <div>
+                            <img src="pic/default.jpg">
+                        </div>
+                        <div>
+                            <img src="pic/default.jpg">
+                        </div>
+                        <div>
+                            <img src="pic/default.jpg">
+                        </div>
+                        <div>
+                            <img src="pic/default.jpg">
+                        </div>
+                </div>
+            </section>
+
+            <hr>
+
+        </main>
+
+        <script>
+            $(window)
+                .on("scroll", function () {
+                    if ($(this).scrollTop()) {
+                        $("nav").addClass("scrolled");
+                    } else {
+                        $("nav").removeClass("scrolled")
+                    }
+                })
+
+            $(document).ready(function () { //使用JQ語法，JQ ready的function是必要的
+                $(function () {
+                    $('#top')
+                        .click(function () {
+                            $('html,body').animate({
+                                scrollTop: $('#cv')
+                                    .offset()
+                                    .top
+                            }, 300);
+                        });
+
+                    $('#sec1').click(function () {
+                        $('html,body').animate({
+                            scrollTop: ($('#ct1').offset().top) - 70
+                        }, 300);
+                    });
+
+                    $('#sec2').click(function () {
+                        $('html,body').animate({
+                            scrollTop: ($('#ct2').offset().top) - 102
+                        }, 300);
+                    });
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
